@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>שולה המוקשים</title>
+  <link rel="stylesheet" href="src/style.css">
+</head>
+
+<body>
+  <main id="app">
+    <script type="module" src="/src/main.ts"></script>
+    <div id="container">
+      <h1 id="header">Minesweeper</h1>
+
+      <div id="entry-screen">
+
+        <p id="Entry-Message">
+          Welcome to the Minesweeper game!<br>
+          Please select the board size and the number of mines.<br>
+          The board size must be at least 2, and the number of mines must be at least 1 and less than the total number
+          of
+          cells (the square of the board size).
+          <br>
+          Enjoy!
+        </p>
+        <p id="invalid-input">Invalid Input</p>
+        <div id="inputs">
+          <input required type="number" min="2" placeholder="Enter Board Size" id="size_input" value="9">
+          <input required type="number" min="1" placeholder="Enter Mines Amount" id="mines_amount_input" value="10">
+        </div>
+
+        <button id="start_button">Start</button>
+      </div>
+      <div id="timer">00:00:00</div>
+      <!-- <input type="submit" placeholder="Start"> -->
+      <p class="lossMassege" id="lossMassege1">💥Game Over💥</p>
+      <p class="lossMassege" id="lossMassege2">💥You Lost💥</p>
+      <p id="winningMassege">🎉You Won!🎉</p>
+    </div>
+  </main>
+  <footer>
+    <div id="flags">🚩0</div>
+    <div id="mines">💣0</div>
+  </footer>
+  <div id="restart-buttons">
+    <button id="restart">New Game</button>
+    <button id="reset">Reset Boerd</button>
+  </div>
+  
+</body>
+
+</html>
